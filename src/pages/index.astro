@@ -3,10 +3,10 @@ import MainLayout from "../layouts/MainLayout.astro";
 import ContactBlock from "../components/blocks/ContactBlock.astro";
 import SalesOfferBlock from "../components/blocks/salesOfferBlock/index.astro";
 import FunnelBlock from "../components/blocks/funnelBlock/index.astro";
-import AboutBlock from "../components/blocks/aboutBlock/index.astro";
+import AboutBlock from "../components/blocks/AboutBlock.astro";
 import ProjectCard from "../components/shared/ProjectCard.astro";
 import HeroBlock from "../components/blocks/HeroBlock.astro";
-import TestimonialsBlock from "../components/blocks/TestimonialsBlock.astro";
+import TestimonialsBlock from "../components/blocks/testimonialsBlock/index.astro";
 // import TestFeaturedSite from "../components/TestFeaturedSite.astro";
 const creativeProjects = await Astro.glob("./creativeProjects/*.md");
 ---
@@ -16,18 +16,16 @@ const creativeProjects = await Astro.glob("./creativeProjects/*.md");
   <!--? UNSURE WHAT TO DO WITH THIS SECTION. JUST LIKE THE LOOK v -->
   <!-- ?<TestFeaturedSite title="title" /> -->
   <!--? UNSURE WHAT TO DO WITH THIS SECTION. JUST LIKE THE LOOK ^  -->
-
   <FunnelBlock />
-
   <TestimonialsBlock />
   <section
     id="NEW- Proof Block "
     class="flex justify-end border-y-2 border-black bg-websiteFocus text-complimentryTextColor py-24"
   >
     <div id="creative-works" class="bg-">
-      <p class="mb-12 text-sm font-bold uppercase tracking-wide">
+      <h2 class="mb-12 text-sm font-bold uppercase tracking-wide">
         Selected Client Success Stories
-      </p>
+      </h2>
       <div id="grid" class="grid 2xl:grid-cols-3 grid-cols-2">
         {
           creativeProjects.map((creativeProject: any) => (

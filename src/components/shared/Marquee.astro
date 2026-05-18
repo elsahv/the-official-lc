@@ -4,26 +4,26 @@ const items = ["WEB💙DEVELOPMENT", "copywriting", "CREATIVE", "CODE"];
 ---
 
 <!-- ELABORATE ON WHAT I BUILD --V -->
-<section class="relative overflow-hidden mt-5 py-3">
+<section class="opacity-85 relative overflow-hidden mt-5 py-3">
   <div
     class="absolute inset-0 bg-[linear-gradient(#eee_1px,transparent_1px),linear-gradient(90deg,#eee_1px,transparent_1px)] bg-[size:48px_48px] opacity-70"
   >
   </div>
 
-  <div class="relative h-40">
-    <p class="text-4xl pb-5 mb-5 pl-5">I build for...</p>
+  <div class="relative h-40 pl-5 ml-3">
+    <h2 class="mb-12 text-sm font-bold uppercase tracking-wide">
+      I build for...
+    </h2>
     <div
-      class="border border-black marquee-track absolute left-1/2 top-1/2 w-[140vw] -translate-x-1/2 -translate-y-1/2 -rotate-4 bg-websiteFocus py-6"
+      class="border border-black marquee-track absolute left-1/2 top-1/2 w-[140vw] -translate-x-1/2 -translate-y-1/2 -rotate-4 bg- py-6"
     >
       <div
-        class="marquee-content flex w-max items-center gap-10 whitespace-nowrap font-mono text-5xl font-black uppercase tracking-wide"
+        class="marquee-content flex w-max items-center gap-10 whitespace-nowrap font-mono text-3 xl font-black uppercase tracking-wide"
       >
         {
           [...items, ...items, ...items, ...items].map((item) => (
-            <span class="lowercase flex items-center gap-10">
-              <span class="px-12 font-thin text-complimentryTextColor">
-                {item}
-              </span>
+            <span class="lowercase flex items-center gap-x-1">
+              <span class="px-12 font- text-">{item}</span>
             </span>
           ))
         }

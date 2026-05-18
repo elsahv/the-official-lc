@@ -22,3 +22,34 @@ CONTACT
 - Skills & Strengths: Mention key skills or strengths that define you professionally or personally.
 - Personal Philosophy/Values: Share your core values, guiding principles, or a brief personal philosophy.
 - Future Aspirations: End with a note on your future goals or aspirations, giving readers insight into what you're working toward.
+
+          <!-- ? POTENTIAL TAGLINESv-->
+              <!-- 1.  Design-forward websites for bold, modern brands.
+                2.Strategic web design with personality.
+                3. Art-directed web design for creative businesses.
+                4. Retro-modern web design with warmth and edge, desert-inspired design.
+                5. Websites that turn desert personality into presence.
+                6.  Elevated websites for growing brands. Standout design for brands ready to be taken seriously.
+                7.  Boutique web design with distinct art direction.
+                8. Art-directed web design with warmth and structure.
+                9. Modern web design with personality and purpose.
+                10. Web design shaped by California’s light, color, and architecture.
+                11. Distinct web experiences inspired by CaliforniaN DESERT landscapes.  -->
+              <!-- ? ^-->
+
+  1.Two tiers is often better to start with.
+
+  2.For Laughing Coyote, 2 tiers can make you look more focused and make it easier for people to choose. Three tiers only helps when each option is clearly distinct and you already know customers need that range.
+  3.Then later, if demand appears, you can add a third tier for things like:
+
+- custom strategy and messaging
+- Sanity CMS
+- blog/content systems
+- ongoing support
+- more advanced integrations
+
+## When creating a component, ask:
+
+- “Could this be used anywhere?” → `ui`
+- “Is this tied to a specific page layout?” → `sections`
+- “Is this part of a system/domain?” → `features`
