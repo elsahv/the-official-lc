@@ -19,7 +19,7 @@ export default {
         neutralBase2: "#FFECD1",
         test1: "#f88379",
         test2: "lightgreen",
-        orange: "#FF7F50",
+        orange: "#FF7F50",  
       },
     },
   },

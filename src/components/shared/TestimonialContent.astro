@@ -28,9 +28,13 @@ const { title, paragraph, img } = Astro.props as Props;
             </div>
           </div>
           <div class="bg- mt-5 pt-5">
-            <div id="sq2" class="lg:mx-2 lg:my-5 lg:px-2">
+            <div id="sq2" class="bg- px-3 lg:my-5">
               <div id="paragraph-container " class="lg:pt-5">
-                <h2 class="font-bold text-2xl">{title}</h2>
+                <h2
+                  class="font-bold text-2xl bg-websiteFocus text-complimentryTextColor sq-styles"
+                >
+                  {title}
+                </h2>
 
                 <div id="paragraph-content" class="text-3xl pt-">
                   <p>

@@ -16,12 +16,12 @@ const MasonryGrid = () => {
   return (
     <div
       id="wrapper"
-      className="bg- mt-1 2xl:opacity-80 opacity-100 2xl:px-[155px] px-[30px] pt-[155px] 2xl:pb-0 pb-5"
+      className="bg-test1 mt-1 2xl:opacity-80 opacity-100 pt-[15] 2xl:pb-0 pb-5"
     >
-      <div id="" className="- ">
+      <div id="" className="flex justify-center ">
         <div
           id="grid"
-          className="bg- grid grid-cols-3 2xl:gap-2 2xl:px-[10x] px-0"
+          className="w-3/4 grid grid-cols-3 2xl:gap-2 2xl:px-[10x] px-0"
         >
           <Sq1 />
           <div id="flex" className="flex col-span-2  ">

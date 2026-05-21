@@ -1,63 +1,13 @@
 ---
-import Image from "astro/components/Image.astro";
-import TestImg from "../../images/aboutComputer.jpg";
-import TestImg2 from "../../images/self2.jpg";
-
-const items = [
-  {
-    paragraph:
-      "GOAL: TO CREATE NOT JUST GENERIC TEMPLATES BUT A BRAND!- designer specializing in retro-modern desert minimal web experiences",
-  },
-  {
-    paragraph:
-      "But the real opportunity isn’t the aesthetic alone — it’s who needs that aesthetic.",
-  },
-  {
-    paragraph:
-      "For a long time, I thought of myself mostly as a builder—someone who made things work. But living in Joshua Tree, surrounded by wide skies, strange plants, and creative people, something shifted. I started to see the web not just as a tool, but as a canvas.",
-  },
-  {
-    paragraph:
-      "I’ve been learning how to be more creative—not just with code, but with how I think, feel, and design. I pay more attention now: to shape and space, to rhythm and flow, to how a site feels when you land on it. I study how artists express themselves, how stories are told visually, and how to make websites feel more like places than pages. ",
-  },
-];
+import ContentFeature from "../shared/ContentFeature.astro";
 ---
 
-<div id="AboutBlock" class="2xl:mr-5 2xl:pr-5">
-  <div id="wrapper" class="bg- flex justify-center pt-5 mt-5">
-    <div id="container" class="mt-5 pt-5 2xl:w-3/4 w-full sm:px-5 max-w-7xl">
-      <div id="grid" class="grid lg:grid-cols-3 grid-cols-1 gap-5">
-        <aside
-          id="aside-image-section"
-          class="bg- md:col-span-1 col-span-2 md:ml-0 ml-2"
-        >
-          <Image
-            id="aside-image"
-            src={TestImg2}
-            alt=""
-            class="lg:w-full w-3/4 border-black border-r mt-5 sq-styles"
-          />
-        </aside>
-        <div id="about-me-content" class="bg- col-span-2">
-          <div class="mb-5 xl:p-3 p-1 flex flex-col space-y-4">
-            <h2 id="title" class="text-4xl">About Me</h2>
-            <div
-              id="about-me-paragraphs-container"
-              class="flex flex-col space-y-4 pl-1"
-            >
-              {items.map((item) => <p>{item.paragraph}</p>)}
-            </div>
-          </div>
-          <Image src={TestImg} alt="" class="sq-styles" />
-          <div class="mt-1 ml-1 mb-[55px] bg-">
-            <!-- TODO: Lean Into Your Desert Identity (Signature Niche) V-->
-            <!--  * 🔥 Strong Positioning Tagline Styles, Clear + Confident (Best for freelance clients) These are simple and effective. -->
-            <p>
-              <a href="/#contact-block"> contact cta</a>
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
+<div id="AboutBlock" class="bg- 2xl:mr-5 2xl:pr-5">
+  <ContentFeature
+    title="About Me"
+    paragraph1="GOAL: TO CREATE NOT JUST GENERIC TEMPLATES BUT A BRAND!- designer specializing in retro-modern desert minimal web experiences"
+    paragraph2="But the real opportunity isn’t the aesthetic alone — it’s who needs that aesthetic."
+    paragraph3="For a long time, I thought of myself mostly as a builder—someone who made things work. But living in Joshua Tree, surrounded by wide skies, strange plants, and creative people, something shifted. I started to see the web not just as a tool, but as a canvas."
+    paragraph4="I’ve been learning how to be more creative—not just with code, but with how I think, feel, and design. I pay more attention now: to shape and space, to rhythm and flow, to how a site feels when you land on it. I study how artists express themselves, how stories are told visually, and how to make websites feel more like places than pages."
+  />
 </div>

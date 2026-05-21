@@ -11,7 +11,7 @@ const Sq2 = () => {
 
       </div>
     <h3 className="font-semibold text-right mr-3 pr-5 pt-1">
-         Brochure websites for small businesses** (1–5 pages, fast turnaround)
+         {/* Brochure websites for small businesses** (1–5 pages, fast turnaround) */}
         </h3>
 
     </div>

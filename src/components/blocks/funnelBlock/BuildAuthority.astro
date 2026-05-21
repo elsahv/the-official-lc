@@ -1,7 +1,22 @@
 ---
+import Image from "astro/components/Image.astro";
 import Marquee from "../../shared/Marquee.astro";
+import SplitShowCase from "../../SplitShowCase.astro";
+import TestImg from "../../../images/moon.png";
 ---
 
-<div id="BuildAuthority" class="bg-">
+<section id="BuildAuthority" class="bg-">
   <Marquee />
-</div>
+
+  <SplitShowCase
+    title="Who LC is for "
+    paragraph1="LC is catered to people who build things. And I'm not talking AI or digital."
+    paragraph2=" LC is for creative businesses who need a leg-up when it comes to putting their business online."
+    paragraph3=""
+    paragraph4="and to build a website that not only reflects the quality of their work, but to use previously built custom templates to make it their own. "
+    jtImg="https://dl.dropboxusercontent.com/scl/fi/uj4b6q4f373hl2mf8s6ao/jtphoto3.jpg?rlkey=55upju5mngahxxsctr8wywxq9&st=02ts91wg&dl=0"
+  />
+  <div id="moon-icon" class="flex justify-center mb-5">
+    <Image src={TestImg} alt="" />
+  </div>
+</section>

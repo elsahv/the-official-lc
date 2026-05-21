@@ -1,6 +1,11 @@
 ---
 // src/components/SkillMarquee.astro
-const items = ["WEB💙DEVELOPMENT", "copywriting", "CREATIVE", "CODE"];
+const items = [
+  "clay artists ",
+  "builders ",
+  "over and under-achievers",
+  "painters",
+];
 ---
 
 <!-- ELABORATE ON WHAT I BUILD --V -->
@@ -18,11 +23,11 @@ const items = ["WEB💙DEVELOPMENT", "copywriting", "CREATIVE", "CODE"];
       class="border border-black marquee-track absolute left-1/2 top-1/2 w-[140vw] -translate-x-1/2 -translate-y-1/2 -rotate-4 bg- py-6"
     >
       <div
-        class="marquee-content flex w-max items-center gap-10 whitespace-nowrap font-mono text-3 xl font-black uppercase tracking-wide"
+        class="marquee-content flex w-max items-center gap-10 whitespace-nowrap font-mono text-3 xl font-black tracking-wide"
       >
         {
           [...items, ...items, ...items, ...items].map((item) => (
-            <span class="lowercase flex items-center gap-x-1">
+            <span class=" flex items-center gap-x-1">
               <span class="px-12 font- text-">{item}</span>
             </span>
           ))

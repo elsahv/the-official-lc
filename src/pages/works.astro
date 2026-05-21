@@ -1,0 +1,80 @@
+---
+import CenterPageBanner from "../components/shared/CenterPageBanner.astro";
+import ProjectCard from "../components/shared/ProjectCard.astro";
+import TestClientSuccess from "../components/TestClientSuccess.astro";
+import MainLayout from "../layouts/MainLayout.astro";
+const allCreativeProjects = await Astro.glob("./creativeProjects/*.md");
+const creativeProjects = await Astro.glob("./creativeProjects/*.md");
+import SalesOfferBlock from "../components/blocks/salesOfferBlock/index.astro";
+---
+
+<MainLayout>
+  <h2>Web Templates</h2>
+  <TestClientSuccess />
+
+  <!-- TODO: USE TO ELABORATE ON CONTENT, I LIKE THIS, DON'T REMOVE! V -->
+  <section
+    id="NEW- Proof Block"
+    class="flex justify-center bg-websiteFocus text-complimentryTextColor border-y-2 border-black"
+  >
+    <div id="creative-works" class="w-3/4">
+      <CenterPageBanner
+        BannerTitle="Featured Works"
+        BannerParagraph="Real sites, experiments, and visual directions"
+      />
+      <div id="grid" class="grid md:grid-cols-2 grid-cols-1 p-5 m-5">
+        {
+          allCreativeProjects.map((creativeProject: any) => (
+            <ProjectCard
+              creativeProjectTitle={
+                creativeProject.frontmatter.creativeProjectTitle
+              }
+              creativeProjectMainImg={
+                creativeProject.frontmatter.creativeProjectMainImg.url
+              }
+              url={creativeProject.url}
+              testItem1={creativeProject.frontmatter.testItem1}
+              websiteNumber={creativeProject.frontmatter.websiteNumber}
+            />
+          ))
+        }
+      </div>
+    </div>
+  </section>
+  <!-- TODO: USE TO ELABORATE ON CONTENT, I LIKE THIS, DON'T REMOVE! ^-->
+
+  test below v
+  <section
+    id="NEW- Proof Block "
+    class="flex justify-end border-y-2 border-black bg-websiteFocus text-complimentryTextColor py-24"
+  >
+    <div id="creative-works" class="bg-">
+      <h2 class="mb-12 text-sm font-bold uppercase tracking-wide">
+        Selected Client Success Stories
+      </h2>
+      <div id="grid" class="grid 2xl:grid-cols-3 grid-cols-2">
+        {
+          creativeProjects.map((creativeProject: any) => (
+            <ProjectCard
+              creativeProjectTitle={
+                creativeProject.frontmatter.creativeProjectTitle
+              }
+              creativeProjectDesc={
+                creativeProject.frontmatter.creativeProjectDesc
+              }
+              creativeProjectMainImg={
+                creativeProject.frontmatter.creativeProjectMainImg.url
+              }
+              creativeTest={creativeProject.frontmatter.creativeTest}
+              url={creativeProject.url}
+              testItem1={creativeProject.frontmatter.testItem1}
+              websiteNumber={creativeProject.frontmatter.websiteNumber}
+            />
+          ))
+        }
+      </div>
+    </div>
+  </section>
+  <!-- PACKAGES V -->
+  <SalesOfferBlock />
+</MainLayout>

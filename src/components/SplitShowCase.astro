@@ -2,7 +2,7 @@
 import ButtonProps from "./shared/ButtonProps.astro";
 import Dynamic from "./Dynamic.jsx";
 import Image from "astro/components/Image.astro";
-import TestImg from "../images/BuildAuthoritySelf.jpg";
+import TestImg from "../images/RQ-test.jpg";
 
 export interface Props {
   title: string;
@@ -10,16 +10,17 @@ export interface Props {
   paragraph2: string;
   paragraph3: string;
   paragraph4: string;
+  jtImg: string;
 }
 
-const { title, paragraph1, paragraph2, paragraph3, paragraph4 } =
+const { title, paragraph1, paragraph2, paragraph3, paragraph4, jtImg } =
   Astro.props as Props;
 ---
 
 <div id="" class="bg- py-5 my-5">
   <div id="PROBLEM-SOLVING-wrapper" class="py-5">
     <div id="container" class="bg-">
-      <div id="about-me-grid" class="grid md:grid-cols-2 grid-cols-1 gap-1">
+      <div id="about-me-grid" class="p-5 grid md:grid-cols-2 grid-cols-1 gap-5">
         <div id="sq1" class="flex md:justify-end justify-center">
           <div
             id="sq1-container"
@@ -30,20 +31,24 @@ const { title, paragraph1, paragraph2, paragraph3, paragraph4 } =
         </div>
         <div id="sq2" class="bg- row-span-2">
           <!-- right img v -->
-          <Image
+
+          <img
             id="self-img"
-            src={TestImg}
+            src="https://dl.dropboxusercontent.com/scl/fi/1luw9cmv86s7cosdtfuee/LCtest-edited-edited.jpg?rlkey=2jonu39xz8samnj9mntx1v0na&st=whcfgbmw&dl=0
+
+          
+"
             alt=""
-            class="sq-styles bg- lg:p-5 p-2 2xl:w-[450px] my-2 sq-styles"
+            class="sq-styles bg- lg:p-5 p-2 2xl:w-1/2 my-2 sq-styles"
           />
         </div>
 
-        <div id="sq3" class="bg- flex 2xl:justify-end">
-          <div class="2xl:w-1/2 w-full md:pl-1 pl-3 md:pr-3 pr-1 pt-5">
+        <div id="sq3" class="flex 2xl:justify-end">
+          <div class="2xl:w-1/2 w-full md:pl-3 pr-2 flex flex-col space-y-2">
             <h2 class="font-bold text-3xl pb-2">{title}</h2>
             <p>
               {paragraph1}<p>
-                <p>
+                <p class="">
                   {paragraph2}
                 </p>
                 <p class="py-1 mb-2">

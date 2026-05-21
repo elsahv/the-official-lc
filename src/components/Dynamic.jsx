@@ -1,3 +1,8 @@
+import Image from "astro/components/Image.astro";
+
+ 
+
+
 function Dynamic(props) {
   return props.isLoggedIn ? (
     <div id="BannerTitle-section" className="bg-cerulean flex justify-start bg-">
@@ -8,11 +13,13 @@ function Dynamic(props) {
   ) : (
     // LEFT IMG --V
     <img
-      src="https://images.pexels.com/photos/285814/pexels-photo-285814.jpeg?_gl=1*hgkjg0*_ga*MTA5MDE3dMzI2MS4xNzU4MjUwMDM4*_ga_8JE65Q40S6*czE3Nzc2Njg4ODckbzU3JGcxJHQxNzc3NjY4OTA5JGozOCRs"
+      src="https://dl.dropboxusercontent.com/scl/fi/xseyb5iv2nbfwyvsn2ee7/LC.png?rlkey=buq16mp5xccyn7qdcu5w02r9i&st=6mltgxjt&dl=0"
       alt=""
-      className="sq-styles"
+      className=""
     />
   );
 }
 
 export default Dynamic;
+ 
+

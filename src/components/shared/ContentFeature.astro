@@ -1,0 +1,64 @@
+---
+import Image from "astro/components/Image.astro";
+import TestImg from "../../images/aboutComputer.jpg";
+import TestImg2 from "../../images/self2.jpg";
+
+export interface Props {
+  title: string;
+  paragraph1: string;
+  paragraph2: string;
+  paragraph3: string;
+  paragraph4: string;
+}
+
+const { title, paragraph1, paragraph2, paragraph3, paragraph4 } =
+  Astro.props as Props;
+---
+
+<div id="AboutBlock" class="bg- 2xl:mr-5 2xl:pr-5">
+  <div id="wrapper" class="bg- flex justify-center pt-5 mt-5">
+    <div id="container" class="mt-5 pt-5 2xl:w-3/4 w-full sm:px-5 max-w-7xl">
+      <div id="grid" class="grid lg:grid-cols-3 grid-cols-1 gap-5">
+        <aside
+          id="aside-image-section"
+          class="bg- md:col-span-1 col-span-2 md:ml-0 ml-2"
+        >
+          <Image
+            id="aside-image"
+            src={TestImg2}
+            alt=""
+            class="lg:w-full w-3/4 border-black border-r mt-5 sq-styles"
+          />
+        </aside>
+        <div id="about-me-content" class="bg- col-span-2">
+          <div class="mb-5 xl:p-3 p-1 flex flex-col space-y-4">
+            <h2 id="title" class="text-4xl">{title}</h2>
+            <div
+              id="about-me-paragraphs-container"
+              class="flex flex-col space-y-4 pl-1"
+            >
+              <p>{paragraph1}</p>
+              <p class="">
+                {paragraph2}
+              </p>
+              <p>{paragraph3}</p>
+              <p
+                class="bg-websiteFocus text-complimentryTextColor sq-styles opacity-90 p-2"
+              >
+                {paragraph4}
+              </p>
+            </div>
+          </div>
+          <Image src={TestImg} alt="" class="sq-styles" />
+          <div class="mt-1 ml-1 mb-[55px] bg-">
+            <!-- TODO: Lean Into Your Desert Identity (Signature Niche) V-->
+            <!--  * 🔥 Strong Positioning Tagline Styles, Clear + Confident (Best for freelance clients) These are simple and effective. -->
+            <p>
+              <a href="/#contact-block"> contact cta</a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
