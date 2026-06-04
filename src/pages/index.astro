@@ -1,10 +1,18 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro";
-import FunnelBlock from "../components/blocks/funnelBlock/index.astro";
-import HeroBlock from "../components/blocks/HeroBlock.astro";
+import Hero from "../components/sections/Hero.astro";
+import BuildAuthority from "../components/sections/BuildAuthority.astro";
+import AddressKeyProblem from "../components/sections/AddressKeyProblem.astro";
+import Testimonials from "../components/sections/Testimonials.astro";
 ---
 
 <MainLayout>
-  <HeroBlock />
-  <FunnelBlock />
+  <Hero />
+  <div id="funnel-wrapper" class="mt-5 pt-5 flex justify-center">
+    <div id="funnel-container" class="pt-5 mt-5">
+      <BuildAuthority />
+      <AddressKeyProblem />
+      <Testimonials />
+    </div>
+  </div>
 </MainLayout>

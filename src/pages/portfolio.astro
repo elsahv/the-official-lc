@@ -1,9 +1,5 @@
 ---
-import NewTemplatePackages from "../components/sections/NewTemplatePackages.astro";
 import CenterPageBanner from "../components/shared/CenterPageBanner.astro";
-import Gallery from "../components/shared/currentlyNotUsed/Gallery.astro";
-import TestPkgCard from "../components/TestPkgCard.astro";
-import TestProjectTemplates from "../components/TestProjectTemplates.astro";
 import MainLayout from "../layouts/MainLayout.astro";
 
 const items = [
@@ -49,55 +45,72 @@ const items = [
 ---
 
 <MainLayout>
-  <div class="bg-test1 pb-3 border border-black">
+  <div class="bg-websiteFocus text-neutralBase2 pb-3 border border-black">
     <CenterPageBanner
       BannerTitle="Portfolio"
       BannerParagraph="brief explanation of my works"
     />
   </div>
-  <!-- TODO: 6/3/26- TESTING OUT NEW PORTFOLIO GRID v-->
-  <section id="grid" class="grid grid-cols-3 bg-blue-">
-    <div id="left-sq-wrapper" class="bg- col-span-1">
-      <div id="left-sq-container" class="bg- p-5 space-y-5">
-        <div id="sq1">
-          <h2>The Growing Pup</h2>
+  <section
+    id="grid"
+    class="grid 2xl:grid-cols-3 grid-cols-2 border border-black"
+  >
+    <div
+      id="coyote-pkgs-wrapper"
+      class="2xl:col-span-1 col-span-2 border-r-2 border-black mt-5 p-5"
+    >
+      <h2 class="font-semibold text-2xl mt-5 pt-5 pl-5">Coyote Packages</h2>
+      <div
+        id="coyote-pkgs-container"
+        class="flex 2xl:flex-col flex-row p-5 2xl:space-y-5"
+      >
+        <div id="sq1" class="rounded-lg p-5 bg-websiteFocus text-neutralBase1">
+          <h3>The Growing Pup</h3>
           <h3>add in cta link</h3>
           <img
             src="https://images.pexels.com/photos/27514559/pexels-photo-27514559.jpeg?_gl=1*k66x7p*_ga*MTA5MDE3MzI2MS4xNzU4MjUwMDM4*_ga_8JE65Q40S6*czE3ODA1MTUzNjMkbzcyJGcxJHQxNzgwNTE2NTU1JGo0OSRsMCRoMA.."
             alt=""
-            class="rounded-2xl"
+            class="rounded-2xl border border-black"
           />
         </div>
-        <div id="sq2">
-          <h2>The Rising Carnivore</h2>
+        <div
+          id="sq2"
+          class="rounded-lg p-</div>5 bg-websiteFocus text-neutralBase2"
+        >
+          <h3>The Rising Carnivore</h3>
           <h3>add in cta link</h3>
           <img
             src="https://images.pexels.com/photos/34362211/pexels-photo-34362211.jpeg?_gl=1*oinp2n*_ga*MTA5MDE3MzI2MS4xNzU4MjUwMDM4*_ga_8JE65Q40S6*czE3ODA1MTUzNjMkbzcyJGcxJHQxNzgwNTE2NTkyJGoxMiRsMCRoMA.."
             alt=""
-            class="rounded-2xl"
+            class="rounded-2xl border border-black"
           />
         </div>
       </div>
     </div>
-    <div id="right-sq" class="col-span-2">
-      <section class="bg- px-4 py-10">
-        <div class="grid grid-cols-1 gap-4 md:grid-cols-3">
+    <div id="right-sq" class="col-span-2 m-5 p-5">
+      <section class="px-4 py-10">
+        <h2
+          class="font-semibold sq-styles bg-websiteFocus text-neutralBase1 w-[100px] mb-3"
+        >
+          Featured Websites
+        </h2>
+        <div class="grid grid-cols-1 gap-4 2xl:grid-cols-3">
           {
             items.map((item) => (
               <a
                 href="#"
                 class:list={[
-                  "group relative flex min-h-[300px] overflow-hidden rounded-2xl md:min-h-[360px]",
+                  "group relative flex min-h-[300px] overflow-hidden rounded-2xl md:min-h-[360px] border-1 border-websiteFocus",
                   item.class,
                 ]}
               >
                 <img
                   src={item.image}
                   alt={item.title}
-                  class="absolute inset-0 h-full w-full object-cover transition duration-500 group-hover:scale-105"
+                  class="p- bg-websiteFocus absolute inset-0 h-full w-full object-cover transition duration-500 group-hover:scale-105"
                 />
 
-                <div class="absolute inset-0 bg-black/35 transition duration-300 group-hover:bg-black/45" />
+                <div class="absolute inset-0 black/35 transition duration-300 group-hover:black/45" />
 
                 <div class="relative z-10 m-auto px-6 text-center text-white">
                   <h3 class="text-3xl font-extrabold tracking-tight md:text-4xl">
@@ -116,4 +129,3 @@ const items = [
     </div>
   </section>
 </MainLayout>
-rounded-2xl

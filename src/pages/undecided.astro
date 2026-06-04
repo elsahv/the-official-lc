@@ -1,0 +1,45 @@
+---
+import HowItWorks from "../components/sections/HowItWorks.astro";
+import ProjectTemplates from "../components/sections/ProjectTemplates.astro";
+import CenterPageBanner from "../components/shared/CenterPageBanner.astro";
+import ProjectCard from "../components/shared/ProjectCard.astro";
+const creativeProjects = await Astro.glob("./creativeProjects/*.md");
+import MainLayout from "../layouts/MainLayout.astro";
+---
+
+<MainLayout>
+  <section
+    id="featured-sites-wrapper"
+    class="bg- flex justify-center border-y-2 border-black bg-websiteFocus text-complimentryTextColor py-24"
+  >
+    <div id="featured-sites-container" class="bg-">
+      <h2
+        id="featured-sites-title"
+        class="mb-12 text-sm font-bold uppercase tracking-wide"
+      >
+        Selected Client Success Stories
+      </h2>
+      <div id="featured-sites-grid" class="grid 2xl:grid-cols-3 grid-cols-2">
+        {
+          creativeProjects.map((creativeProject: any) => (
+            <ProjectCard
+              creativeProjectTitle={
+                creativeProject.frontmatter.creativeProjectTitle
+              }
+              creativeProjectDesc={
+                creativeProject.frontmatter.creativeProjectDesc
+              }
+              creativeProjectMainImg={
+                creativeProject.frontmatter.creativeProjectMainImg.url
+              }
+              creativeTest={creativeProject.frontmatter.creativeTest}
+              url={creativeProject.url}
+              testItem1={creativeProject.frontmatter.testItem1}
+              websiteNumber={creativeProject.frontmatter.websiteNumber}
+            />
+          ))
+        }
+      </div>
+    </div>
+  </section>
+</MainLayout>
